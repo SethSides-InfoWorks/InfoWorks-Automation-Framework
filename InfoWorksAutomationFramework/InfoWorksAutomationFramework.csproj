@@ -64,12 +64,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AutomationConstants.cs" />
+    <Compile Include="FrameworkUtilities\ChildElementFinder.cs" />
+    <Compile Include="FrameworkUtilities\ChildElementsFinder.cs" />
+    <Compile Include="Page_Objects\HomePage.cs" />
+    <Compile Include="Page_Objects\IPageObjectModel.cs" />
+    <Compile Include="Page_Objects\NavBar.cs" />
+    <Compile Include="Tests\BaseTest.cs" />
+    <Compile Include="Tests\ExampleTest.cs" />
+    <Compile Include="FrameworkUtilities\Browser.cs" />
     <Compile Include="MouseUtility.cs" />
-    <Compile Include="PageObject1.cs" />
+    <Compile Include="Page_Objects\PageObject1.cs" />
     <Compile Include="InfoWorksElement.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SuperTest.cs" />
-    <Compile Include="Test1.cs" />
+    <Compile Include="Tests\SuperTest.cs" />
+    <Compile Include="Tests\Test1.cs" />
+    <Compile Include="FrameworkUtilities\UIElement.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
