@@ -16,6 +16,15 @@ namespace InfoWorksAutomationFramework.FrameworkUtilities
             _parentElement = parentElement;
         }
 
+        public OpenQA.Selenium.Remote.RemoteWebDriver ElementWebDriver
+        {
+            get
+            {
+                var re = _parentElement.Native as OpenQA.Selenium.Remote.RemoteWebElement;
+                return re.WrappedDriver as OpenQA.Selenium.Remote.RemoteWebDriver;
+            }
+        }
+
         public UIElement Css(string css)
         {
             return new UIElement(_parentElement.FindCss(css));
@@ -45,10 +54,13 @@ namespace InfoWorksAutomationFramework.FrameworkUtilities
             IWebElement element = (IWebElement)_parentElement.Native;
             return new UIElement ((ElementScope)element.FindElement(By.TagName(tagName)));
         }
-        public UIElement ClassName(string className)
+        public UIElement ClassName(string className, Options option = null)
         {
-            IWebElement element = (IWebElement)_parentElement.Native;
-            return new UIElement((ElementScope)element.FindElement(By.ClassName(className)));
+            //IWebElement element = (IWebElement)_parentElement.Native;
+            //return new UIElement((ElementScope)element.FindElement(By.ClassName(className)));
+            var selenium = ((OpenQA.Selenium.Remote.RemoteWebElement) _parentElement.Native);
+            var element = selenium.FindElement(By.ClassName(className));
+            return element as UIElement;
         }
 
     }

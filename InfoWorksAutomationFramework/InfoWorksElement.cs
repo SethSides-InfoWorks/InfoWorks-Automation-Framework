@@ -66,5 +66,11 @@ namespace InfoWorksAutomationFramework
                 Element.Native);
             return this;
         }
+
+        public InfoWorksElement ClassName(string className)
+        {
+            ElementWebDriver.FindElement(By.ClassName(className));
+            return this;
+        }
     }
 }

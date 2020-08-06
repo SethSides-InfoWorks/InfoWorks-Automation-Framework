@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Coypu;
 
 namespace InfoWorksAutomationFramework.Page_Objects
 {
@@ -19,7 +20,7 @@ namespace InfoWorksAutomationFramework.Page_Objects
         #region Industries Links
         private static UIElement HealthCareLink => IndustriesLink.FindElementBy.LinkText("Healthcare");
         private static UIElement FinancialServicesLink => IndustriesLink.FindElementBy.Id("menu-item-2986");
-        private static UIElement ManufacturingLink => IndustriesLink.FindElementBy.ClassName("menu-item-2971");
+        private static UIElement ManufacturingLink => IndustriesLink.FindElementBy.ClassName("menu-item-2971", Options.First);
         private static UIElement RetailLink => IndustriesLink.FindElementBy.Id("menu-item-2985");
         private static UIElement NonProfitLink => IndustriesLink.FindElementBy.Id("menu-item-3162");
         #endregion
@@ -75,5 +76,6 @@ namespace InfoWorksAutomationFramework.Page_Objects
             ContactLink.Click();
         }
         #endregion
+
     }
 }

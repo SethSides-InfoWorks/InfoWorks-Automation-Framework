@@ -17,7 +17,6 @@ namespace InfoWorksAutomationFramework
         [Test]
         public void ActualTest()
         {
-            
             NavBar.GoToHealthCareIndustry();
             Thread.Sleep(3000);
             NavBar.GoToFinancialServicesIndustry();
@@ -28,7 +27,7 @@ namespace InfoWorksAutomationFramework
             Thread.Sleep(3000);
             NavBar.GoToRetailIndustry();
             Thread.Sleep(3000);
-        }   
+        }
 
     }
 }
